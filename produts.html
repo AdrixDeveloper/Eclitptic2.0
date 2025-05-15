@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECLIPTIC | EE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f4f4f4;
+      color: #111;
+    }
+
+    header.hero {
+      position: relative;
+      background: url('/BNNER2.jpg') center/cover no-repeat;
+      height: 500px;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-title {
+      font-family: 'Archivo Black', sans-serif;
+      color: #fff;
+      font-size: 3rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      text-transform: lowercase;
+    }
+
+    .nav-marquee {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-family: 'Archivo Black', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      color: #fff;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1rem;
+    }
+
+    .marquee p {
+      display: inline-block;
+      animation: marquee 12s linear infinite;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-family: 'Archivo Black', sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      font-family: 'Archivo Black', sans-serif;
+      margin: 0.5rem 0;
+    }
+
+    .product-card p {
+      margin: 0.5rem 0;
+    }
+
+    .product-card a {
+      margin-top: 1.0rem;
+      padding: 0.5rem 1rem;
+      background: #111;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-family: 'Open Sans', sans-serif;
+      text-decoration: none;
+    }
+
+    .product-card button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-title">all products</div>
+    <div class="nav-marquee">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">All Products</a></li>
+          <li><a href="tel:655175913">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="marquee">
+        <p>ABRIMOS PRONTO · Different Perspective®</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Tees</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://iili.io/3kwkj0G.th.png" alt="Aniversary Hoodie">
+          <h3>Iconic Tee</h3>
+          <p>€11.99</p>
+          <a>Comprar</a>
+        </div>
+        <div class="product-card">
+          <img src="https://iili.io/3kwkj0G.th.png" alt="Not Summer Yet Tee">
+          <h3>Winter Tee</h3>
+          <p>€11.99</p>
+          <a>Comprar</a>
+        </div>
+        <div class="product-card">
+          <img src="https://iili.io/3kwkj0G.th.png" alt="Merch Pack">
+          <h3>Not Summer Yet! Tee</h3>
+          <p>€€11.99</p>
+          <a>Comprar</a>
+        </div>
+  
+      </div>
+    </section>
+
+        <section>
+      <h2>Hoodies</h2>
+      <div class="product-grid">
+              <div class="product-card">
+          <img src="https://iili.io/3kwkj0G.th.png" alt="Merch Pack">
+          <h3>Iconic Hoodie</h3>
+          <p>€25.999</p>
+          <a>Comprar</a>
+        </div>
+                <div class="product-card">
+          <img src="https://iili.io/3kwkj0G.th.png" alt="Merch Pack">
+          <h3>Crush! Hoodie</h3>
+          <p>€25.99</p>
+          <a>Comprar</a>
+        </div>
+                <div class="product-card">
+          <img src="https://iili.io/3kwkj0G.th.png" alt="Merch Pack">
+          <h3>Signature Hoodie</h3>
+          <p>€25.99</p>
+          <a>Comprar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
