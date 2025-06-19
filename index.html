@@ -624,10 +624,15 @@
        <div class="newsletter-container">
            <h2>Únete a nuestra newsletter</h2>
            <p>Recibe las últimas novedades, ofertas exclusivas y lanzamientos de productos directamente en tu bandeja de entrada.</p>
-           <form class="newsletter-form">
-               <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
-               <button type="submit" class="newsletter-btn">Suscribirse</button>
-           </form>
+          <form action="https://formsubmit.co/0m3g4_Dev@proton.me" method="POST" class="newsletter-form">
+    <input type="email" name="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+    <input type="hidden" name="_subject" value="(1) SUSCRIPTOR NEWSLETTER ECLIPTIC">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://ecliptic.site/gracias.html">
+    <button type="submit" class="newsletter-btn">Suscribirse</button>
+</form>
+
        </div>
    </section>
   
@@ -701,20 +706,6 @@
            });
           
            // Newsletter form
-           const newsletterForm = document.querySelector('.newsletter-form');
-           newsletterForm.addEventListener('submit', function(e) {
-               e.preventDefault();
-               const email = this.querySelector('.newsletter-input').value;
-              
-               // Validación simple
-               if (email && email.includes('@')) {
-                   alert('¡Gracias por suscribirte a nuestra newsletter!');
-                   this.reset();
-               } else {
-                   alert('Por favor, introduce un correo electrónico válido.');
-               }
-           });
-       });
    </script>
 </body>
 </html>
