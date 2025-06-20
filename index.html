@@ -660,53 +660,34 @@
        </div>
    </footer>
   
-   <script>
-       // Carrusel Hero
-       document.addEventListener('DOMContentLoaded', function() {
-           // Hero Slides
-           const slides = document.querySelectorAll('.hero-slide');
-           let currentSlide = 0;
-          
-           function showSlide(n) {
-               slides.forEach(slide => slide.classList.remove('active'));
-               slides[n].classList.add('active');
-           }
-          
-           function nextSlide() {
-               currentSlide = (currentSlide + 1) % slides.length;
-               showSlide(currentSlide);
-           }
-          
-           // Cambiar slide cada 5 segundos
-           setInterval(nextSlide, 5000);
-          
-           // Tabs de productos
-           const tabBtns = document.querySelectorAll('.tab-btn');
-           const productSections = {
-               'sudaderas': document.getElementById('sudaderas'),
-               'camisetas': document.getElementById('camisetas')
-           };
-          
-           tabBtns.forEach(btn => {
-               btn.addEventListener('click', () => {
-                   // Remover clase active de todos los botones
-                   tabBtns.forEach(b => b.classList.remove('active'));
-                   // Agregar clase active al botón clickeado
-                   btn.classList.add('active');
-                  
-                   // Ocultar todas las secciones
-                   Object.values(productSections).forEach(section => {
-                       section.style.display = 'none';
-                   });
-                  
-                   // Mostrar la sección correspondiente
-                   const tabId = btn.getAttribute('data-tab');
-                   productSections[tabId].style.display = 'block';
-               });
-           });
-          
-           // Newsletter form
-   </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const productSections = {
+            'sudaderas': document.getElementById('sudaderas'),
+            'camisetas': document.getElementById('camisetas')
+        };
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Cambiar clase activa en los botones
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Ocultar todas las secciones
+                Object.values(productSections).forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                // Mostrar la sección correspondiente
+                const tabId = btn.getAttribute('data-tab');
+                if (productSections[tabId]) {
+                    productSections[tabId].style.display = 'block';
+                }
+            });
+        });
+    });
+</script>  
 </body>
 </html>
 
